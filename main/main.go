@@ -7,12 +7,20 @@ import (
 )
 
 func main() {
-	startVector()
+	fmt.Println("Sequential storage and vector structs:")
+	vector()
+	fmt.Println()
+
+	fmt.Println("Linked List:")
+	linkedList()
+	fmt.Println()
+
+	fmt.Println("Double Linked List")
+	doubleLinkedList()
+	fmt.Println()
 }
 
-func startVector() {
-
-	// Creating students
+func vector() {
 	s1 := alurastructs.Student{
 		Name: "João",
 	}
@@ -40,4 +48,71 @@ func startVector() {
 	studentsVector.RemoveAtGivenIndex(111)
 
 	fmt.Println("studentsVector:", studentsVector)
+}
+
+func linkedList() {
+	linkedList := alurastructs.LinkedList{}
+	linkedList.AddToStart("Amanda")
+	linkedList.AddToStart("Pedro")
+	linkedList.AddToStart("Maru")
+
+	linkedList.ShowContents()
+
+	linkedList.AddToEnd("Jane")
+
+	linkedList.ShowContents()
+
+	linkedList.AddAtGivenIndex("Tia Ana", 1)
+	linkedList.ShowContents()
+
+	fmt.Printf("linkedList.GrabElement(2): %v\n", linkedList.GrabElementAtIndex(2))
+
+	fmt.Printf("linkedList.Length(): %v\n", linkedList.Length())
+
+	linkedList.RemoveFromStart()
+	linkedList.ShowContents()
+	fmt.Printf("linkedList.Length(): %v\n", linkedList.Length())
+
+	linkedList.RemoveAtGivenIndex(2)
+	linkedList.ShowContents()
+	fmt.Printf("linkedList.Length(): %v\n", linkedList.Length())
+
+	linkedList.RemoveFromTheEnd()
+	linkedList.ShowContents()
+	fmt.Printf("linkedList.Length(): %v\n", linkedList.Length())
+}
+
+func doubleLinkedList() {
+	doubleLinkedList := alurastructs.DoubleLinkedList{}
+	doubleLinkedList.AddToStart("Amanda")
+	doubleLinkedList.AddToStart("Pedro")
+	doubleLinkedList.AddToStart("Maru")
+
+	doubleLinkedList.ShowContents()
+
+	doubleLinkedList.AddToEnd("Jane")
+
+	doubleLinkedList.ShowContents()
+
+	doubleLinkedList.AddAtGivenIndex("Tia Ana", 1)
+	doubleLinkedList.ShowContents()
+
+	fmt.Printf("doubleLinkedList.GrabElement(2): %v\n", doubleLinkedList.GrabElementAtIndex(2))
+
+	fmt.Printf("doubleLinkedList.Length(): %v\n", doubleLinkedList.Length())
+
+	doubleLinkedList.RemoveFromStart()
+	doubleLinkedList.ShowContents()
+	fmt.Printf("doubleLinkedList.Length(): %v\n", doubleLinkedList.Length())
+
+	doubleLinkedList.RemoveAtGivenIndex(2)
+	doubleLinkedList.ShowContents()
+	fmt.Printf("doubleLinkedList.Length(): %v\n", doubleLinkedList.Length())
+
+	doubleLinkedList.RemoveFromTheEnd()
+	doubleLinkedList.ShowContents()
+	fmt.Printf("doubleLinkedList.Length(): %v\n", doubleLinkedList.Length())
+
+	fmt.Printf("doubleLinkedList.Contains(\"Pedro\"): %v\n", doubleLinkedList.Contains("Pedro"))
+	fmt.Printf("doubleLinkedList.Contains(\"Maru\"): %v\n", doubleLinkedList.Contains("Maru"))
 }

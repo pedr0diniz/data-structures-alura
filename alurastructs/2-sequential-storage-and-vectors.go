@@ -38,7 +38,7 @@ func (v *Vector) AddToNextEmptyIndex(s Student) {
 	// O(1), constant time complexity.
 	// Will always find the next index right away.
 	v.students[v.amountOfstudents] = s
-	fmt.Printf("\nAdded %s to the list of students at position %d!", s.Name, v.amountOfstudents)
+	fmt.Printf("Added %s to the list of students at position %d!\n", s.Name, v.amountOfstudents)
 	v.amountOfstudents++
 }
 
@@ -69,7 +69,7 @@ func (v *Vector) Grab(index int) Student {
 	}
 
 	student := v.students[index]
-	fmt.Println("\nFound", student, "at index", index)
+	fmt.Println("Found", student, "at index", index)
 	return student
 }
 
@@ -101,6 +101,6 @@ func (v *Vector) Contains(s Student) bool {
 }
 
 // O(1) complexity. We always return the size straight away.
-func (v *Vector) Size() int {
+func (v *Vector) Length() int {
 	return v.amountOfstudents
 }
