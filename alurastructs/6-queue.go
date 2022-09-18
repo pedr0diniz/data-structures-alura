@@ -22,6 +22,10 @@ func (q *Queue) Dequeue() string {
 	return current
 }
 
+func (q *Queue) Peek() string {
+	return q.elements.firstElement.Element
+}
+
 // O(1) complexity. Has access to the size address.
 func (q *Queue) IsEmpty() bool {
 	return q.elements.Length() == 0

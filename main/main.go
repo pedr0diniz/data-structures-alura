@@ -128,20 +128,20 @@ func doubleLinkedList() {
 func stack() {
 	stack := alurastructs.Stack{}
 
-	stack.Insert("Pedro")
+	stack.Push("Pedro")
 	stack.ShowContents()
 
-	stack.Insert("Amanda")
+	stack.Push("Amanda")
 	stack.ShowContents()
 
-	stack.Insert("Maru")
+	stack.Push("Maru")
 	stack.ShowContents()
 
-	s1 := stack.Remove()
+	s1 := stack.Pop()
 	fmt.Printf("s1: %v\n", s1)
 	stack.ShowContents()
 
-	s2 := stack.Remove()
+	s2 := stack.Pop()
 	fmt.Printf("s2: %v\n", s2)
 	stack.ShowContents()
 }

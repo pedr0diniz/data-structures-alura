@@ -10,15 +10,20 @@ type Stack struct {
 }
 
 // O(1) complexity, easily accesses the first element because of its pointer
-func (s *Stack) Insert(element string) {
+func (s *Stack) Push(element string) {
 	s.elements.AddToStart(element)
 }
 
 // O(1) complexity. Has direct access to the first element.
-func (s *Stack) Remove() string {
+func (s *Stack) Pop() string {
 	stackTop := s.elements.firstElement.Element
 	s.elements.RemoveFromStart()
 	return stackTop
+}
+
+// O(1) complexity. Has direct access to the first element.
+func (s *Stack) Peek() string {
+	return s.elements.firstElement.Element
 }
 
 // O(1) complexity. Has access to the size address.
