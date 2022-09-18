@@ -19,12 +19,12 @@ func main() {
 	// doubleLinkedList()
 	// fmt.Println()
 
-	fmt.Println("Stack:")
-	stack()
-	fmt.Println()
+	// fmt.Println("Stack:")
+	// stack()
+	// fmt.Println()
 
 	fmt.Println("Queue:")
-	stack()
+	queue()
 	fmt.Println()
 }
 
@@ -147,5 +147,11 @@ func stack() {
 }
 
 func queue() {
+	q := alurastructs.Queue{}
 
+	q.Enqueue("Pedro")
+	q.Enqueue("Amanda")
+	q.Enqueue("Jane")
+
+	q.Dequeue()
 }
