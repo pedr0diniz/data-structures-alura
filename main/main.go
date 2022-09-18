@@ -7,16 +7,24 @@ import (
 )
 
 func main() {
-	fmt.Println("Sequential storage and vector structs:")
-	vector()
+	// fmt.Println("Sequential storage and vector structs:")
+	// vector()
+	// fmt.Println()
+
+	// fmt.Println("Linked List:")
+	// linkedList()
+	// fmt.Println()
+
+	// fmt.Println("Double Linked List:")
+	// doubleLinkedList()
+	// fmt.Println()
+
+	fmt.Println("Stack:")
+	stack()
 	fmt.Println()
 
-	fmt.Println("Linked List:")
-	linkedList()
-	fmt.Println()
-
-	fmt.Println("Double Linked List")
-	doubleLinkedList()
+	fmt.Println("Queue:")
+	stack()
 	fmt.Println()
 }
 
@@ -115,4 +123,29 @@ func doubleLinkedList() {
 
 	fmt.Printf("doubleLinkedList.Contains(\"Pedro\"): %v\n", doubleLinkedList.Contains("Pedro"))
 	fmt.Printf("doubleLinkedList.Contains(\"Maru\"): %v\n", doubleLinkedList.Contains("Maru"))
+}
+
+func stack() {
+	stack := alurastructs.Stack{}
+
+	stack.Insert("Pedro")
+	stack.ShowContents()
+
+	stack.Insert("Amanda")
+	stack.ShowContents()
+
+	stack.Insert("Maru")
+	stack.ShowContents()
+
+	s1 := stack.Remove()
+	fmt.Printf("s1: %v\n", s1)
+	stack.ShowContents()
+
+	s2 := stack.Remove()
+	fmt.Printf("s2: %v\n", s2)
+	stack.ShowContents()
+}
+
+func queue() {
+
 }
