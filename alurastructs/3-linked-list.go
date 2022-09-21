@@ -156,3 +156,19 @@ func (ll *LinkedList) RemoveAtGivenIndex(position int) {
 
 	ll.amountOfElements--
 }
+
+// O(n) complexity. Potentially has to loop through all nodes.
+func (ll *LinkedList) Contains(element string) bool {
+	current := ll.firstElement
+	for {
+		if current == nil {
+			return false
+		}
+
+		if current.Element == element {
+			return true
+		}
+
+		current = current.Next
+	}
+}

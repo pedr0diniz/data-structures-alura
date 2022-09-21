@@ -7,24 +7,28 @@ import (
 )
 
 func main() {
-	// fmt.Println("Sequential storage and vector structs:")
-	// vector()
-	// fmt.Println()
+	fmt.Println("Sequential storage and vector structs:")
+	vector()
+	fmt.Println()
 
-	// fmt.Println("Linked List:")
-	// linkedList()
-	// fmt.Println()
+	fmt.Println("Linked List:")
+	linkedList()
+	fmt.Println()
 
-	// fmt.Println("Double Linked List:")
-	// doubleLinkedList()
-	// fmt.Println()
+	fmt.Println("Double Linked List:")
+	doubleLinkedList()
+	fmt.Println()
 
-	// fmt.Println("Stack:")
-	// stack()
-	// fmt.Println()
+	fmt.Println("Stack:")
+	stack()
+	fmt.Println()
 
 	fmt.Println("Queue:")
 	queue()
+	fmt.Println()
+
+	fmt.Println("Set:")
+	set()
 	fmt.Println()
 }
 
@@ -154,4 +158,13 @@ func queue() {
 	q.Enqueue("Jane")
 
 	q.Dequeue()
+}
+
+func set() {
+	s := alurastructs.CreateSet()
+
+	s.Add("Amanda")
+	s.Add("Javalácia")
+	fmt.Printf("s.Contains(\"Amanda\"): %v\n", s.Contains("Amanda"))
+	s.ShowContents()
 }

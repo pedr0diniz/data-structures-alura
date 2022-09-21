@@ -178,13 +178,14 @@ func (dll *DoubleLinkedList) RemoveAtGivenIndex(position int) {
 func (dll *DoubleLinkedList) Contains(element string) bool {
 	current := dll.firstElement
 	for {
+		if current == nil {
+			return false
+		}
+
 		if current.Element == element {
 			return true
 		}
 
 		current = current.Next
-		if current == nil {
-			return false
-		}
 	}
 }
